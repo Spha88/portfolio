@@ -1,0 +1,32 @@
+.BurgerIcon {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    cursor: pointer;
+}
+
+.BurgerIcon span {
+    display: inline-block;
+    height: 5px;
+    margin: 2px;
+    border-radius: 5px;
+    background: #C0C0C0;
+    align-self: flex-end;
+    transition: all 500ms ease-in-out;
+}
+
+.BurgerIcon span:first-child {
+    width: 30px;
+}
+.BurgerIcon span:nth-child(2) {
+    width: 40px;
+}
+.BurgerIcon span:last-child {
+    width: 20px;
+}
+
+.BurgerIcon:hover span {
+    width: 40px;
+    background-color: rgb(53, 53, 53);
+}
+  

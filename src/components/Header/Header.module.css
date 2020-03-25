@@ -1,0 +1,19 @@
+.Header {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(51, 51, 51);
+
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.Header:hover {
+    color: rgb(0, 0, 0);
+}
+
+.Header .NavContainer {
+    display: flex;
+}
