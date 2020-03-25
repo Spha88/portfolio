@@ -20,5 +20,33 @@
 .Nav li a {
     display: inline-block;
     margin: 2px 5px;
+    padding: 0 10px;
     text-transform: uppercase;
+    position: relative;
+}
+
+.Nav li a:after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 3px;
+    background: #333;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out !important;
+}
+
+.Nav li:hover a:after {
+    width: 100%;
+}
+
+.Nav li a.active:after {
+    width: 100%;
 }
