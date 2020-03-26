@@ -1,0 +1,38 @@
+.Skill {
+    margin: 5px 1%;
+    box-sizing: border-box;
+    width: 48%;
+
+}
+
+.Skill h4 {
+    font-size: 0.95em;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.Skill .Bar {
+    border: 2px solid #C0C0C0;
+    width: 100%;
+    margin: 0;
+    display: inline-block;
+}
+
+.Skill .Bar .Experience {
+    border-radius: 0 !important;
+    margin: 3px;
+    background-color: rgb(92, 92, 92);
+    height: 20px;
+}
+
+.Skill .Bar .AnimateExperience {
+    height: 100%;
+    width: 0;
+    background-color: rgb(31, 31, 31);
+    transition: all ease 1s;
+}
+
+.Skill:hover .Bar .AnimateExperience {
+    width: 100%;
+}
+

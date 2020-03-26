@@ -1,0 +1,9 @@
+h1 {
+    text-transform: uppercase;
+}
+
+.SkillsList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}

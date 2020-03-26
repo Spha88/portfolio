@@ -1,0 +1,11 @@
+.Container {
+    max-width: 1140px;
+    padding: 20px 0;
+    margin: 20px auto;
+}
+
+.Container:after {
+    content: '';
+    display: table;
+    clear: both;
+}
