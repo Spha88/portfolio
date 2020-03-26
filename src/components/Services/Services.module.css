@@ -1,0 +1,9 @@
+.ServiceItems {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.Cursive {
+    font-family: "Dancing Script", cursive;
+}
