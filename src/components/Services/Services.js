@@ -12,7 +12,7 @@ const Services = props => {
             <div className={classes.ServiceItems}>
                 <Service
                     number="01"
-                    title="We and Graphic Design"
+                    title="Web and Graphic Design"
                     content="From websites, logos, pamphlets, business cards, billboards, 
                             calendars and other graphic work. I always make sure to involve my 
                             clients when I am working on a design to create a product that not only 

@@ -50,6 +50,10 @@
     margin-bottom: 15px;
 }
 
+.SocialMedia li:hover {
+    color: #000;
+}
+
 .SocialMedia a {
     font-size: 30px;
 }

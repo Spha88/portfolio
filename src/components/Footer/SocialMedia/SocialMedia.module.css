@@ -1,0 +1,22 @@
+.SocialMedia {
+    padding: 20px;
+}
+
+.SocialMedia p {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.SocialMediaIcons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.SocialMediaIcons li {
+    margin-right: 10px;
+}
+
+.SocialMediaIcons li a i {
+    font-size: 30px;
+}

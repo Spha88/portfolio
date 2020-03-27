@@ -1,0 +1,18 @@
+.ContactDetails {
+    padding: 20px;
+}
+
+.ContactDetails h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.Bold {
+    font-weight: bold;
+}
+
+.ContactDetails ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}

@@ -1,0 +1,44 @@
+.Footer {
+    background: rgb(240, 240, 240);
+    color: #000;
+}
+
+.FooterInner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.Footer .FooterSections {
+    display: flex;
+}
+
+.Footer .FooterSections > div {
+    width: 33.333%;
+}
+
+.Footer:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.lastRow {
+    padding-top: 50px;
+    padding: 20px 10px;
+    color: rgb(202, 202, 202);
+    background: #333;
+    transition: color 1s ease-in-out;
+}
+.lastRow:hover {
+    color: #fff;
+}
+
+.lastRow p {
+    margin: 0;
+    text-align: center;
+}
+
+.lastRow p:first-child {
+    font-size: .9em;
+}

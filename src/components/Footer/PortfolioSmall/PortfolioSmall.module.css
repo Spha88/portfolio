@@ -1,0 +1,13 @@
+.PortfolioSmall {
+    padding: 20px;
+}
+
+.PortfolioSmall h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+.PortfolioItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
