@@ -42,7 +42,29 @@
     padding: 0;
 }
 
-
 .ServiceItem .Service p {
     margin-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .ServiceItem .ServiceNumber h1 {
+        font-size: 4em;
+        line-height: 50px;
+        left: -30px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .ServiceItem {
+        width: 100%;
+        padding: 0;
+    }
+
+    .ServiceItem .ServiceNumber h1 {
+        left: -30px;
+    }
+
+    .ServiceItem:hover  .ServiceNumber h1 {
+        left: -10px;
+    }
 }

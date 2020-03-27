@@ -37,7 +37,14 @@
     /* border: 1px solid black; */
     display: flex;
     position: absolute;
-    transition: all ease-in-out 1000ms;
+    transition: all ease-in-out 1000ms; 
+}
+
+@media only screen and (max-width: 425px){
+    .TestimonialsCarousel .CarouselIndicators li {
+        width: 80px;
+        height: 80px;
+    }
 }
 
 

@@ -14,7 +14,7 @@ const Footer = props => {
                         <SocialMedia />
                     </div>
                     <div>
-                        <ContactDetails />
+                        <ContactDetails /> 
                     </div>
                     <div>
                         <PortfolioSmall />

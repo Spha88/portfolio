@@ -2,11 +2,10 @@
     margin: 5px 1%;
     box-sizing: border-box;
     width: 48%;
-
 }
 
 .Skill h4 {
-    font-size: 0.95em;
+    font-size: 0.95em; 
     margin: 0;
     margin-bottom: 5px;
 }
@@ -34,5 +33,22 @@
 
 .Skill:hover .Bar .AnimateExperience {
     width: 100%;
+}
+
+@media only screen and (max-width: 425px) {
+    .Skill {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Skill h4 {
+        width: 30%;
+    }
+
+    .Skill .Bar {
+        width: 70%;
+    }
 }
 

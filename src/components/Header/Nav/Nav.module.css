@@ -10,6 +10,12 @@
     opacity: 1;
 }
 
+@media only screen and (max-width: 768px){
+    .Nav {
+        display: none;
+    }
+}
+
 .Nav ul {
     display: flex;
     margin: 0;
@@ -23,9 +29,20 @@
     padding: 0 10px;
     text-transform: uppercase;
     position: relative;
+    letter-spacing: 1px;
+}
+.Nav li:hover a {
+    font-weight: bold;
 }
 
-.Nav li a:after {
+.Nav li a.active {
+    font-weight: 900;
+    color: #000;
+    border-left: 5px solid rgb(70, 70, 70);
+    border-right: 5px solid rgb(70, 70, 70);
+}
+/* Underline hover & active effect */
+/* .Nav li a:after {
     display: inline-block;
     content: "";
     position: absolute;
@@ -49,4 +66,6 @@
 
 .Nav li a.active:after {
     width: 100%;
-}
+} */
+/* =================================== */
+

@@ -4,16 +4,26 @@ import classes from './Header.module.css';
 import Nav from './Nav/Nav';
 import BurgerIcon from '../UI/BurgerIcon/BurgerIcon';
 import Logo from '../UI/Logo/Logo';
+import SideDrawer from './SideDrawer/SideDrawer';
 
 
 class Header extends Component {
+
     state = {
-        displayNav: false
+        displayNav: false,
+        displaySideDrawer: false
     }
 
     toggleDisplayNav = () => {
         this.setState( state => {
             return { displayNav: !state.displayNav }
+        })
+    }
+
+    toggleSideDrawer = () => {
+        console.log('Mobile pressed');
+        this.setState( state => {
+            return { displaySideDrawer: !state.displaySideDrawer }
         })
     }
 
@@ -25,7 +35,11 @@ class Header extends Component {
                     <Nav displayNav={this.state.displayNav} />
                     <BurgerIcon toggleNav={this.toggleDisplayNav} />
                 </div>
-            </header>
+                <BurgerIcon toggleSideDrawer={this.toggleSideDrawer} mobile={true}/>
+                <SideDrawer 
+                    toggleSideDrawer = { this.toggleSideDrawer }
+                    displaySideDrawer = { this.state.displaySideDrawer } />
+            </header> 
          );
     }
 }

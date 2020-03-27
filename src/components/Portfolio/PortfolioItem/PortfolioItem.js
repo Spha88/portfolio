@@ -12,4 +12,4 @@ const PortfolioItem = props => {
     );
 }
  
-export default PortfolioItem;
+export default PortfolioItem; 

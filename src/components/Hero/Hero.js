@@ -16,10 +16,10 @@ const Hero = props => {
             
             <div className={classes.Slogan}>
                 <h2 className={classes.cursive}>Web & Graphics</h2>
-                <h2>Content Creation</h2>
+                <h2>Content Creation</h2> 
             </div>
 
-        </section>
+        </section> 
      );
 }
  

@@ -5,6 +5,20 @@
     cursor: pointer;
 }
 
+.Mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 768px){
+    .BurgerIcon {
+        display: none;
+    }
+
+    .Mobile {
+        display: flex;
+    }
+}
+
 .BurgerIcon span {
     display: inline-block;
     height: 5px;

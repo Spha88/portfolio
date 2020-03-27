@@ -15,7 +15,7 @@ const Skill = props => {
             <div className={classes.Bar}>
                 <div className={classes.Experience} style={style} >
                     <div className={classes.AnimateExperience}></div>
-                </div>
+                </div> 
             </div>
         </div>
     );

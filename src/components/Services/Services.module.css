@@ -1,3 +1,7 @@
+.ServicesHeading {
+    margin: 0 0 10px 20px;
+}
+
 .ServiceItems {
     display: flex;
     flex-wrap: wrap;

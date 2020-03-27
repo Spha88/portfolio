@@ -8,10 +8,10 @@ import Service from './Service/Service';
 const Services = props => {
     return ( 
         <Container>
-            <h1>Things I do <span className={classes.Cursive}>Services</span></h1>
+            <h1 className={classes.ServicesHeading}>Things I do <span className={classes.Cursive}>Services</span></h1>
             <div className={classes.ServiceItems}>
                 <Service
-                    number="01"
+                    number="01" 
                     title="Web and Graphic Design"
                     content="From websites, logos, pamphlets, business cards, billboards, 
                             calendars and other graphic work. I always make sure to involve my 

@@ -1,6 +1,6 @@
 .Container {
     max-width: 1140px;
-    padding: 20px 0;
+    padding: 20px;
     margin: 20px auto;
 }
 
@@ -8,4 +8,10 @@
     content: '';
     display: table;
     clear: both;
+}
+
+@media only screen and (max-width: 768px) {
+    .Container {
+        margin: 0 auto;
+    }
 }

@@ -42,3 +42,12 @@
 .lastRow p:first-child {
     font-size: .9em;
 }
+
+@media only screen and (max-width: 425px){
+    .Footer .FooterSections {
+        flex-wrap: wrap;
+    }
+    .Footer .FooterSections > div {
+        width: 100%;
+    }
+}
