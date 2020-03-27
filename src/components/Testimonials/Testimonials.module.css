@@ -1,0 +1,43 @@
+.TestimonialsCarousel {
+    /* border: 1px solid green; */
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+.TestimonialsCarousel .CarouselIndicators {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* border: 1px solid green; */
+    padding: 10px 0;
+    margin: 0;
+}
+
+.TestimonialsCarousel .CarouselIndicators li {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: 100% 100%;
+    margin: 5px;
+    cursor: pointer;
+    opacity: .4;
+    transition: all 1s ease-in-out;
+}
+
+.TestimonialsCarousel .CarouselIndicators li.active {
+    opacity: 1;
+    border:1px solid #C0C0C0;
+}
+
+.TestimonialsCarousel .CarouselInner {
+    /* border: 1px solid black; */
+    display: flex;
+    position: absolute;
+    transition: all ease-in-out 1000ms;
+}
+
+

@@ -8,7 +8,7 @@
   }
   
   .aboutUsContainer .backgroundImage {
-    background: #000 url(../../Assests/images/background.jpg) no-repeat fixed center;
+    background: #000 url(../../assets/images/background.jpg) no-repeat fixed center;
     position: absolute;
     align-self: center;
     height: 80%;

@@ -1,0 +1,28 @@
+.CarouselItem {
+    text-align: center;
+    /* border:1px solid yellow; */
+    padding: 20px;
+}
+
+.CarouselItem .TestimonialContent {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.CarouselItem .TestimonialContent p {
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.PersonName {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.CompanyName {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
