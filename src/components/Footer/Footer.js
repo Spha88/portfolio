@@ -7,7 +7,7 @@ import PortfolioSmall from './PortfolioSmall/PortfolioSmall';
 
 const Footer = props => {
     return ( 
-        <footer className={classes.Footer}>
+        <footer className={classes.Footer} id="contact">
             <div className={classes.FooterInner}>
                 <div className={classes.FooterSections}>
                     <div>

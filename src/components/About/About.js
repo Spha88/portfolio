@@ -27,7 +27,7 @@ class About  extends Component {
 
     render(){
         return ( 
-            <Container>
+            <Container id="about">
                 <div className={classes.aboutUsContainer} id="aboutContainer">
                     <div style={{ width: `${this.state.containerWidth}px` }} className={classes.backgroundImage}></div>
                     <div className={classes.content}>

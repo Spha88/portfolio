@@ -20,7 +20,7 @@ import document_6 from '../../assets/documents/project_6.pdf';
 const Portfolio = props => {
     console.log(bg_portfolio_1);
     return ( 
-        <Container >
+        <Container id="portfolio">
             <header className={classes.PortfolioHeader}>
                     <h1>Clients and Work</h1>
                     <Button label="View All" />

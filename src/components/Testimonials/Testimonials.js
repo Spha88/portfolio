@@ -51,7 +51,7 @@ class Testimonials extends Component {
             'transform': `translateX(-${ (this.state.currentSlide/this.state.numberOfSlides)*100 }%)`
         }
         return ( 
-            <Container>
+            <Container id="testimonials">
                 <div className={classes.TestimonialsCarousel} id="carouselInner">
 
                     <ul className={classes.CarouselIndicators}>

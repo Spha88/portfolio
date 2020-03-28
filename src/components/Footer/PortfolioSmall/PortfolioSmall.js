@@ -16,7 +16,7 @@ const PortfolioSmall = props => {
     return ( 
         <div className={classes.PortfolioSmall}>
             <h2>My Portfolio</h2>
-            <div className={classes.PortfolioItems}>
+            <div className={classes.PortfolioItems}> 
                 <Item background={image_1} />
                 <Item background={image_2} />
                 <Item background={image_3} />

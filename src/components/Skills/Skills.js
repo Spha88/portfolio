@@ -6,9 +6,9 @@ import Skill from './Skill/Skill';
 
 const Skills = props => {
     return ( 
-        <Container>
+        <Container id="skills">
             <h1 className={classes.SkillsHeading}>My Set of Skills</h1>
-            <div className={classes.SkillsList}>
+            <div  className={classes.SkillsList}>
                 <Skill 
                     skillHeading="HTML5"
                     experience="95%" />
