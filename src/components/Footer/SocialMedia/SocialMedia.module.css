@@ -20,3 +20,18 @@
 .SocialMediaIcons li a i {
     font-size: 30px;
 }
+
+@media only screen and (max-width: 425px){
+    .SocialMedia {
+        padding-bottom: 0;
+    }
+
+    .SocialMediaIcons {
+        margin-bottom: 0;
+        justify-content: center;
+    }
+
+    .SocialMediaIcons li a i {
+        font-size: 40px;
+    }
+}

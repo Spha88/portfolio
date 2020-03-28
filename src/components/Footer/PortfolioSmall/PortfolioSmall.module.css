@@ -11,3 +11,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+@media only screen and (max-width: 768px) {
+    .PortfolioItems > div:first-child,
+    .PortfolioItems > div:last-child {
+        display: none;
+    }
+}

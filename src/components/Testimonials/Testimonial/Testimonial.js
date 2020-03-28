@@ -15,4 +15,4 @@ const Testimonial = props => {
     );
 }
  
-export default Testimonial;
+export default Testimonial; 

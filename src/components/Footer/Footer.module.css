@@ -50,4 +50,9 @@
     .Footer .FooterSections > div {
         width: 100%;
     }
+
+    .lastRow p:first-child {
+        font-size: .75em;
+        letter-spacing: 1px;;
+    }
 }
