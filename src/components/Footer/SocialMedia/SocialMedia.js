@@ -20,4 +20,4 @@ const SocialMedia = props => {
      );
 }
  
-export default SocialMedia;
+export default SocialMedia; 

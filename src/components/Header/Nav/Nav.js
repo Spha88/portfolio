@@ -21,7 +21,7 @@ const Nav = props =>  {
                                     to={navItem.id} 
                                     spy={true} smooth={true} 
                                     duration={1000} 
-                                    offset={-100} 
+                                    offset={-60} 
                                     activeClass={classes.active}>
                                         {navItem.label}
                                 </Link>

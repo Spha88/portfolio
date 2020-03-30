@@ -16,7 +16,7 @@ const SideNav = () => {
                                 spy={true} 
                                 smooth={true} 
                                 duration={1000} 
-                                offset={-100} 
+                                offset={-60} 
                                 activeClass={classes.active}> 
                                 <span className={classes.Label}>{navItem.label}</span>
                             </Link>
