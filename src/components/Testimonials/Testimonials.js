@@ -23,8 +23,6 @@ class Testimonials extends Component {
 
         this.setState({ numberOfSlides: slides.length });
 
-        console.log(slides.length);
-
         // Set the width of the slides to be equal to that of the parent div
         for (let i = 0; i < slides.length; i++) slides[i].style.width = carouselContainerWidth + 'px';
 

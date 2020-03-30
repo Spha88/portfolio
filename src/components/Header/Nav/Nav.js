@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Nav.module.css';
 import { Link } from 'react-scroll';
+import navItems from '../NavItems';
 
 const Nav = props =>  {
 
@@ -12,11 +13,22 @@ const Nav = props =>  {
     return ( 
         <nav className={navClasses.join(' ')}>
             <ul>
-                <li><Link to="about" spy={true} smooth={true} duration={1000} offset={-100} activeClass={classes.active}>About</Link></li>
-                <li><Link to="skills" spy={true} smooth={true} duration={1000} offset={-100} activeClass={classes.active}>Skills</Link></li>
-                <li><Link to="services" spy={true} smooth={true} duration={1000} offset={-100} activeClass={classes.active}>My Services</Link></li>
-                <li><Link to="portfolio" spy={true} smooth={true} duration={1000} offset={-100} activeClass={classes.active}>Portfolio</Link></li>
-                <li><Link to="testimonials" spy={true} smooth={true} duration={1000} offset={-100} activeClass={classes.active}>Testimonials</Link></li>
+                { 
+                    navItems.map( navItem => {
+                        return (
+                            <li key={navItem.id}>
+                                <Link
+                                    to={navItem.id} 
+                                    spy={true} smooth={true} 
+                                    duration={1000} 
+                                    offset={-100} 
+                                    activeClass={classes.active}>
+                                        {navItem.label}
+                                </Link>
+                            </li>
+                        );
+                    })
+                }
             </ul>
         </nav>
     );

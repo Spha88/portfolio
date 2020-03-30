@@ -18,7 +18,6 @@ import document_5 from '../../assets/documents/project_5.pdf';
 import document_6 from '../../assets/documents/project_6.pdf';
 
 const Portfolio = props => {
-    console.log(bg_portfolio_1);
     return ( 
         <Container id="portfolio">
             <header className={classes.PortfolioHeader}>

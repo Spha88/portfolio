@@ -3,7 +3,7 @@ import classes from './BurgerIcon.module.css';
 
 const BurgerIcon = props => {
 
-    const {toggleNav, toggleSideDrawer, mobile, iconId } = props;
+    const {toggleNav, toggleSideDrawer, mobile } = props;
 
     const iconClasses = [ classes.BurgerIcon ];
 
