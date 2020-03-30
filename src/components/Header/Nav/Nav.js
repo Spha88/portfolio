@@ -1,5 +1,6 @@
 import React from 'react';
-import classes from './Nav.module.css'
+import classes from './Nav.module.css';
+import { Link } from 'react-scroll';
 
 const Nav = props =>  {
 
@@ -11,11 +12,11 @@ const Nav = props =>  {
     return ( 
         <nav className={navClasses.join(' ')}>
             <ul>
-                <li><a className={classes.active} href="#about">About</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#services">My Services</a></li> 
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#testimonials" >Testimonials</a></li>
+                <li><Link to="about" spy={true} smooth={true} duration={1000} offset={-100} activeClass={classes.active}>About</Link></li>
+                <li><Link to="skills" spy={true} smooth={true} duration={1000} offset={-100} activeClass={classes.active}>Skills</Link></li>
+                <li><Link to="services" spy={true} smooth={true} duration={1000} offset={-100} activeClass={classes.active}>My Services</Link></li>
+                <li><Link to="portfolio" spy={true} smooth={true} duration={1000} offset={-100} activeClass={classes.active}>Portfolio</Link></li>
+                <li><Link to="testimonials" spy={true} smooth={true} duration={1000} offset={-100} activeClass={classes.active}>Testimonials</Link></li>
             </ul>
         </nav>
     );

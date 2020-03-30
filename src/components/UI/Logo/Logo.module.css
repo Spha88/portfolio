@@ -1,7 +1,17 @@
+.Logo {
+    cursor: pointer;
+    transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 .Logo span {
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
     font-family: "Maven Pro", sans-serif;
+    line-height: 30px;
+}
+
+.Small {
+    transform: scale(0.7);
 }

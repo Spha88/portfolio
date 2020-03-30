@@ -7,7 +7,7 @@ const Overlay = props => {
 
     const { click } = props;
 
-    return <div style={{backgroundImage: `url(${overlayBg})`}} onClick={ click } className={classes.Overlay} />
+    return <div  onClick={ click } className={classes.Overlay} />
 }
  
 export default Overlay;

@@ -3,7 +3,7 @@ import classes from './BurgerIcon.module.css';
 
 const BurgerIcon = props => {
 
-    const {toggleNav, toggleSideDrawer, mobile } = props;
+    const {toggleNav, toggleSideDrawer, mobile, iconId } = props;
 
     const iconClasses = [ classes.BurgerIcon ];
 
@@ -11,6 +11,7 @@ const BurgerIcon = props => {
 
     return ( 
         <div 
+            id="mobileBurgerIcon"
             className={iconClasses.join(' ')} 
             onClick={ mobile ? toggleSideDrawer : toggleNav } >
             <span></span>

@@ -6,6 +6,15 @@ import ContactDetails from './ContactDetails/ContactDetails';
 import PortfolioSmall from './PortfolioSmall/PortfolioSmall';
 
 const Footer = props => {
+
+    console.dir(document.body);
+
+    document.addEventListener( 'scroll', e => {
+       console.log(window.pageYOffset);
+       console.log(document.body.scrollHeight);
+    //    console.log('scrolling')
+    })
+    
     return ( 
         <footer className={classes.Footer} id="contact">
             <div className={classes.FooterInner}>

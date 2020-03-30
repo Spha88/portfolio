@@ -1,9 +1,16 @@
 import React from 'react';
 import classes from './Logo.module.css';
 
-const Logo = (prop) => {
+const Logo = props => {
+
+    const logoClasses = [classes.Logo];
+    if( props.small ){
+        logoClasses.push(classes.Small);
+        console.log(props.small);
+    }
+
     return ( 
-        <div className={classes.Logo}>
+        <div className={logoClasses.join(' ')} onClick={props.click} id={props.id}>
             <span>Spha</span>
         </div>
      );

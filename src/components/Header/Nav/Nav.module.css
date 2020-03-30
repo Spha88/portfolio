@@ -30,6 +30,8 @@
     text-transform: uppercase;
     position: relative;
     letter-spacing: 1px;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
 }
 .Nav li:hover a {
     font-weight: bold;
