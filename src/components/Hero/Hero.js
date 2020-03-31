@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './Hero.module.css';
+import pattern from '../../assets/images/log_pattern.png';
 
 const Hero = props => {
     return ( 
@@ -15,8 +16,15 @@ const Hero = props => {
             </div>
             
             <div className={classes.Slogan}>
-                <h2 className={classes.cursive}>Web & Graphics</h2>
-                <h2>Content Creation</h2> 
+                <h2 className={classes.cursive}> Web Design & </h2>
+                <h2>Development</h2> 
+            </div>
+
+            <div className={classes.imagePatterns}>
+                <img src={pattern} className={classes.pattern} alt="pattern" />
+                <img src={pattern} className={classes.pattern} alt="pattern" />
+                <img src={pattern} className={classes.pattern} alt="pattern" />
+                <img src={pattern} className={classes.pattern} alt="pattern" />
             </div>
 
         </section> 
