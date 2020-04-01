@@ -5,6 +5,12 @@
     padding: 20px;
     color: rgb(51, 51, 51);
     /* border: 2px solid green; */
+    /* overflow-x: hidden; */
+}
+
+.imagePatterns {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .Hero img.pattern {

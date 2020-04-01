@@ -48,7 +48,7 @@
     display: flex;
     align-items: center;
     height: 100%;
-    width: 20%;
+    width: 12%;
     opacity: .5;
     cursor: pointer;
     z-index: 100;
@@ -61,9 +61,14 @@
 .slideButtons div.next {
     right: 0;
     justify-content: flex-end;
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,0.27494747899159666) 0%, rgba(255,255,255,1) 88%, rgba(255,255,255,1) 100%);
 }
 .slideButtons div.prev {
     justify-content: flex-start;
+    left: 0;
+    background: rgb(255,255,255);
+    background: linear-gradient(270deg, rgba(255,255,255,0.27494747899159666) 0%, rgba(255,255,255,1) 88%, rgba(255,255,255,1) 100%);
 }
 .slideButtons div.next span {
     margin-right: 20%;
@@ -77,9 +82,17 @@
 
 @media only screen and (max-width: 425px){
     .TestimonialsCarousel .CarouselIndicators li {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
+
+    .slideButtons div.next,
+    .slideButtons div.prev {
+        font-size: 20px;
+        padding-top: 20%;
+        background: transparent;
+    }
+
 }
 
 
