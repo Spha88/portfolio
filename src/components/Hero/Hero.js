@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './Hero.module.css';
-import pattern from '../../assets/images/log_pattern.png';
 
 const Hero = props => {
     return ( 

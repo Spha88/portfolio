@@ -3,7 +3,7 @@ import classes from './Portfolio.module.css';
 
 import Container from '../UI/Container/Container';
 import PortfolioItem from './PortfolioItem/PortfolioItem';
-import Button from '../UI/Button/Button';
+// import Button from '../UI/Button/Button';
 
 import bg_portfolio_1 from '../../assets/images/bg_portfolio_1.png';
 import bg_portfolio_2 from '../../assets/images/bg_portfolio_2.png';
