@@ -1,7 +1,7 @@
 .Header {
     /* border: 1px solid black; */
 
-    position: sticky;
+    position: sticky !important;
     top: 0;
     background-color: #fff;
     z-index: 200;
@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
 
-    position: sticky;
+    position: sticky !important;
     top: 0;
     background-color: #fff;
     z-index: 200;

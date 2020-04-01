@@ -20,13 +20,6 @@ const Hero = props => {
                 <h2>Development</h2> 
             </div>
 
-            <div className={classes.imagePatterns}>
-                <img src={pattern} className={classes.pattern} alt="pattern" />
-                <img src={pattern} className={classes.pattern} alt="pattern" />
-                <img src={pattern} className={classes.pattern} alt="pattern" />
-                <img src={pattern} className={classes.pattern} alt="pattern" />
-            </div>
-
         </section> 
      );
 }
