@@ -22,7 +22,6 @@ const Portfolio = props => {
         <Container id="portfolio">
             <header className={classes.PortfolioHeader}>
                     <h1>Clients and Work</h1>
-                    <Button label="View All" />
             </header>
             <div className={classes.PortfolioThumbnails}>
                 <PortfolioItem

@@ -160,7 +160,7 @@ class Testimonials extends Component {
                             style={{backgroundImage: `url(${portrait_three})`}}></li>
                     </ul>
 
-                    <div className={classes.CarouselInner} id="carouselStrip">
+                    <div className={classes.CarouselInner} id="carouselStrip"> 
                         <Testimonial 
                             personName="3 Robert Nqwamla"
                             companyName="Finance Company"

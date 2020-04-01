@@ -27,7 +27,7 @@
     opacity: .4;
     transition: all 1s ease-in-out;
 }
-
+.TestimonialsCarousel .CarouselIndicators li:hover,
 .TestimonialsCarousel .CarouselIndicators li.active {
     opacity: 1;
     border:1px solid #C0C0C0;
