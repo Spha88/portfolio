@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './Portfolio.module.css';
+
+import { Link, useLocation } from 'react-router-dom';
+
+import { animateScroll as scroll } from 'react-scroll';
 
 import Container from '../UI/Container/Container';
 import PortfolioItem from './PortfolioItem/PortfolioItem';
-// import Button from '../UI/Button/Button';
+import Button from '../UI/Button/Button';
 
 import bg_portfolio_1 from '../../assets/images/bg_portfolio_1.png';
 import bg_portfolio_2 from '../../assets/images/bg_portfolio_2.png';
@@ -18,10 +22,19 @@ import document_5 from '../../assets/documents/project_5.pdf';
 import document_6 from '../../assets/documents/project_6.pdf';
 
 const Portfolio = props => {
+    let location = useLocation();
+
+    useEffect(() => {
+        if(location !== '/'){
+            scroll.scrollToTop({smooth: true, duration: 1000, delay: 500 });
+        }
+    })
+
     return ( 
         <Container id="portfolio">
             <header className={classes.PortfolioHeader}>
                     <h1>Clients and Work</h1>
+                    { location.pathname === '/' ? <Link to="portfolio"><Button label="View all" /></Link> : null }
             </header>
             <div className={classes.PortfolioThumbnails}>
                 <PortfolioItem

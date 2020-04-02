@@ -4,7 +4,7 @@ import classes from './Footer.module.css';
 import SocialMedia from './SocialMedia/SocialMedia';
 import ContactDetails from './ContactDetails/ContactDetails';
 import PortfolioSmall from './PortfolioSmall/PortfolioSmall';
-import FooterNav from '../Header/FooterNav/FooterNav';
+import FooterNav from '../../components/Navigation/FooterNav/FooterNav';
 
 const Footer = props => {
     

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import classes from './Header.module.css';
 
-import Nav from './Nav/Nav';
+import Nav from '../Navigation/Nav/Nav';
 import BurgerIcon from '../UI/BurgerIcon/BurgerIcon';
 import Logo from '../UI/Logo/Logo';
-import SideDrawer from './SideDrawer/SideDrawer';
-import SideNav from './SideNav/SideNav';
+import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
 
 import { animateScroll as scroll } from 'react-scroll';
 
@@ -68,8 +67,7 @@ class Header extends Component {
                     <SideDrawer 
                         toggleSideDrawer = { this.toggleSideDrawer }
                         displaySideDrawer = { this.state.displaySideDrawer } /> 
-
-                    <SideNav />
+                        
                 </div>
             </header> 
          );

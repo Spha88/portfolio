@@ -3,7 +3,7 @@ import classes from './Hero.module.css';
 
 const Hero = props => {
     return ( 
-        <section className={classes.Hero}>
+        <section className={classes.Hero} id="home">
             
             <div className={classes.SocialMedia}>
                 <ul>
