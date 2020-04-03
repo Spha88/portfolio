@@ -22,11 +22,14 @@ import document_5 from '../../assets/documents/project_5.pdf';
 import document_6 from '../../assets/documents/project_6.pdf';
 
 const Portfolio = props => {
+
     let location = useLocation();
+    console.log(props);
+    console.log(location);
 
     useEffect(() => {
-        if(location !== '/'){
-            scroll.scrollToTop({smooth: true, duration: 1000, delay: 500 });
+        if(location.pathname === '/portfolio_view_all' ){
+            scroll.scrollToTop({smooth: true, duration: 1000 });
         }
     })
 
@@ -34,7 +37,7 @@ const Portfolio = props => {
         <Container id="portfolio">
             <header className={classes.PortfolioHeader}>
                     <h1>Clients and Work</h1>
-                    { location.pathname === '/' ? <Link to="portfolio"><Button label="View all" /></Link> : null }
+                    { location.pathname !== '/portfolio_view_all' ? <Link to="portfolio_view_all"><Button label="View all" /></Link> : null }
             </header>
             <div className={classes.PortfolioThumbnails}>
                 <PortfolioItem

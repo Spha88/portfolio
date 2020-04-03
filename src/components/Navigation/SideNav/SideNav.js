@@ -3,6 +3,7 @@ import classes from './SideNav.module.css'
 import navItems from '../NavItems';
 
 import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
 
 const SideNav = () => {
     return (

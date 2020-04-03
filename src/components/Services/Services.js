@@ -7,7 +7,7 @@ import Service from './Service/Service';
 
 const Services = props => {
     return ( 
-        <Container id="services">
+        <Container id="services" name="services">
             <h1 className={classes.ServicesHeading}>Things I do <span className={classes.Cursive}>Services</span></h1>
             <div className={classes.ServiceItems}>
                 <Service

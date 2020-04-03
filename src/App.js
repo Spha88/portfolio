@@ -15,8 +15,11 @@ function App() {
       <Header />
 
       <Switch>
-        <Route path="/portfolio" component={ Portfolio } />
+
+        <Route path="/portfolio_view_all" component={ Portfolio } />
+        <Route path="/:section" component={ HomePage } />
         <Route path="/" component={ HomePage } />
+
       </Switch>
 
       <Footer />

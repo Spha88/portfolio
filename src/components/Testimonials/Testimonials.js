@@ -23,7 +23,6 @@ class Testimonials extends Component {
         for (let i = 0; i < slides.length; i++) slides[i].style.width = carouselContainerWidth + 'px';
 
         // Height of the
-        console.dir(carouselContainer)
         let firstChildHeight = carouselContainer.children[1].offsetHeight;
         let lastChildHeight = carouselContainer.lastElementChild.offsetHeight;
 

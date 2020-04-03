@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
+
+import { animateScroll as scroll } from 'react-scroll';
 
 import Hero from '../../components/Hero/Hero';
 import About from '../../components/About/About';
@@ -9,9 +11,16 @@ import Testimonials from '../../components/Testimonials/Testimonials';
 import SideNav from '../../components/Navigation/SideNav/SideNav';
 
 
-class HomePage extends Component {
+const HomePage = props => {
 
-    render() { 
+        useEffect(() => {
+            if( props.match.params.section ) {
+                const section = props.match.params.section;
+                const elementPosition = document.getElementById(section).offsetTop;
+                scroll.scrollTo( elementPosition - 60 , { smooth: true, duration: 1000, spy: true } )
+            }
+        });
+
         return ( 
             <React.Fragment>
                 <Hero />
@@ -23,7 +32,6 @@ class HomePage extends Component {
                 <SideNav />
             </React.Fragment>
         );
-    }
 }
  
 export default HomePage;

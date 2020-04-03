@@ -14,11 +14,8 @@ class About  extends Component {
         let backgroundImage = container.firstChild;
         let containerWidth = container.offsetWidth; 
 
-        console.log(containerWidth);
-
         this.setState({ containerWidth: containerWidth });
         backgroundImage.style.width = containerWidth + 'px !important';
-        console.dir(document.querySelector('#aboutContainer'));
     }
 
     componentDidMount() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Nav.module.css';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
 import navItems from '../NavItems';
 
 const Nav = props =>  {
@@ -12,24 +13,17 @@ const Nav = props =>  {
 
     return ( 
         <nav className={navClasses.join(' ')}>
-            <ul>
-                { 
-                    navItems.map( navItem => {
-                        return (
-                            <li key={navItem.id}>
-                                <Link
-                                    to={navItem.id} 
-                                    spy={true} smooth={true} 
-                                    duration={1000} 
-                                    offset={-60} 
-                                    activeClass={classes.active}>
-                                        {navItem.label}
-                                </Link>
-                            </li>
-                        );
-                    })
-                }
-            </ul>
+            <ul> { 
+                navItems.map( navItem => {
+                    return (
+                        <li key={navItem.id}>
+                            <NavLink to={`/${navItem.id}`} activeClassName={classes.active}>
+                                    {navItem.label}
+                            </NavLink>
+                        </li>
+                    );
+                })
+            } </ul>
         </nav>
     );
 }

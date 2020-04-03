@@ -18,8 +18,10 @@ class Header extends Component {
 
     componentDidMount = () => {
         window.addEventListener('scroll', e => {
+            
             let logo = document.querySelector('#header_logo');
             let burgerIcon = document.querySelector('#mobileBurgerIcon');
+
             if(window.pageYOffset > 20 ) {
                 logo.style.transform = "scale(0.7)";
                 burgerIcon.style.transform = "scale(0.7)";
@@ -49,7 +51,7 @@ class Header extends Component {
  
     render() { 
         return ( 
-            <header className={classes.Header} onClick={(e) => console.dir(e.target)}>
+            <header className={classes.Header}>
                 <div className={classes.HeaderContainer}>
 
                     <Logo
