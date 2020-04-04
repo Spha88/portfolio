@@ -62,7 +62,7 @@
     font-size: .8em;
     letter-spacing: 1px;
     font-weight: bold;
-    background: #fff;
+    text-shadow: 2px 2px 0px #FFFFFF;
     transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -72,12 +72,12 @@
 }
 
 .SideNav ul li a.active {
-    background: rgb(148, 148, 148);
+    /* background: rgb(148, 148, 148); */
     width: 20px;
     height: 20px;
 }
 
-@media only screen and (max-width: 1440px){
+@media only screen and (max-width: 1200px){
     .SideNav{
         display: none;
     }

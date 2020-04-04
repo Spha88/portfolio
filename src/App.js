@@ -16,7 +16,7 @@ function App() {
 
       <Switch>
 
-        <Route path="/portfolio_view_all" component={ Portfolio } />
+        <Route path="/portfolio/all" component={ Portfolio } />
         <Route path="/:section" component={ HomePage } />
         <Route path="/" component={ HomePage } />
 

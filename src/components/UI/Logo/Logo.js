@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './Logo.module.css';
+import { Link } from 'react-router-dom';
 
 const Logo = props => {
 
@@ -11,7 +12,7 @@ const Logo = props => {
 
     return ( 
         <div className={logoClasses.join(' ')} onClick={props.click} id={props.id}>
-            <span>Spha</span>
+            <Link to="/"><span>Spha</span></Link>
         </div>
      );
 }

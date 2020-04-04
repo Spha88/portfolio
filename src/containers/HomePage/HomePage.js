@@ -17,7 +17,10 @@ const HomePage = props => {
             if( props.match.params.section ) {
                 const section = props.match.params.section;
                 const elementPosition = document.getElementById(section).offsetTop;
-                scroll.scrollTo( elementPosition - 60 , { smooth: true, duration: 1000, spy: true } )
+                scroll.scrollTo( elementPosition - 60 , { smooth: true, duration: 1000, spy: true } );
+
+            } else {
+                scroll.scrollToTop({ offset: -60, spy: true });
             }
         });
 

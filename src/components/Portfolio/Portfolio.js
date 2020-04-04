@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import classes from './Portfolio.module.css';
 
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 
 import { animateScroll as scroll } from 'react-scroll';
 
@@ -24,11 +24,11 @@ import document_6 from '../../assets/documents/project_6.pdf';
 const Portfolio = props => {
 
     let location = useLocation();
-    console.log(props);
-    console.log(location);
+    const history = useHistory();
+    console.log(history);
 
     useEffect(() => {
-        if(location.pathname === '/portfolio_view_all' ){
+        if(location.pathname === '/portfolio/all' ){
             scroll.scrollToTop({smooth: true, duration: 1000 });
         }
     })
@@ -37,7 +37,7 @@ const Portfolio = props => {
         <Container id="portfolio">
             <header className={classes.PortfolioHeader}>
                     <h1>Clients and Work</h1>
-                    { location.pathname !== '/portfolio_view_all' ? <Link to="portfolio_view_all"><Button label="View all" /></Link> : null }
+                    { location.pathname !== '/portfolio/all' ? <Link to="portfolio/all"><Button label="View all" /></Link> : null }
             </header>
             <div className={classes.PortfolioThumbnails}>
                 <PortfolioItem

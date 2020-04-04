@@ -2,43 +2,34 @@ import React from 'react';
 import classes from './FooterNav.module.css';
 
 import navItems from '../NavItems';
-
 import { Link } from 'react-scroll';
 
-import { useLocation, NavLink } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const FooterNav = () => {
 
-    const location = useLocation();
-
-    const scrollLinks = (
-        navItems.map( navItem => {
-            return (
-                <li key={navItem.id}>
-                    <Link to={navItem.id} spy={true} smooth={true} duration={1000} offset={-60} activeClass={classes.active} >
-                        {navItem.label} 
-                    </Link>
-                </li>
-            );
-        })
-    );
-
-    const routerLinks = (
-        navItems.map( navItem => {
-            return (
-                <li key={navItem.id}>
-                    <NavLink to={`/${navItem.id}`} activeClassName={classes.active} >
-                        {navItem.label} 
-                    </NavLink>
-                </li>
-            );
-        })
-    );
+    const history = useHistory();
 
     return (
     <div className={classes.FooterNav}>
         <ul>
-            { location.pathname === '/portfolio' ? routerLinks : scrollLinks }
+            {
+                navItems.map( navItem => {
+                    return (
+                        <li key={navItem.id}>
+                            <Link 
+                                to={navItem.id} 
+                                spy={true} smooth={true}  
+                                duration={1000}  
+                                offset={-60}  
+                                activeClass={classes.active} 
+                                onClick={()=> history.push(`/${navItem.id}`)}> 
+                                    <span className={classes.Label}>{navItem.label}</span>
+                            </Link>
+                        </li>
+                    );
+                })
+            }
         </ul>
     </div>
     )
