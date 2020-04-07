@@ -1,19 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { images } from './GalleryItemList';
 import Container from '../../UI/Container/Container';
 import classes from './Gallery.module.css';
 
 const Gallery = () => {
-
-    
-    useEffect(()=>{
-
-        const galleryContainer = document.getElementById('gallery');
-
-        console.log(galleryContainer.clientWidth);
-
-        console.dir(galleryContainer);
-    })
 
     return (
         <Container>

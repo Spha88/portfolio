@@ -12,7 +12,7 @@ const Nav = props =>  {
     if( displayNav ) navClasses.push( classes.DisplayNav );
 
     return ( 
-        <nav className={navClasses.join(' ')}>
+        <nav className={navClasses.join(' ')}> 
             <ul> { 
                 navItems.map( navItem => {
                     return (

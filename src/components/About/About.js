@@ -10,16 +10,22 @@ class About  extends Component {
     }
 
     prepareComponent = () => {
-        let container = document.querySelector('#aboutContainer')
+        let container = document.querySelector('#aboutContainer');
         let backgroundImage = container.firstChild;
         let containerWidth = container.offsetWidth; 
 
         this.setState({ containerWidth: containerWidth });
-        backgroundImage.style.width = containerWidth + 'px !important';
+
+        backgroundImage.style.width = containerWidth + 'px';
+
+        //Make sure the size of the the background element is dynamically resizes to that of the container;
+        window.addEventListener( 'resize', () => {
+            this.setState({ containerWidth: container.offsetWidth });
+        })
     }
 
     componentDidMount() {
-        this.prepareComponent();
+        this.prepareComponent(); 
     }
 
     render(){

@@ -3,8 +3,7 @@ import classes from './SideDrawer.module.css';
 import OverLay from '../../UI/Overlay/Overlay';
 
 import navItems from '../NavItems';
-
-import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
 
 const SideDrawer = props => {
 
@@ -20,16 +19,9 @@ const SideDrawer = props => {
                     navItems.map( navItem => {
                         return (
                             <li key={navItem.id}>
-                                <Link
-                                    to={navItem.id} 
-                                    spy={true} 
-                                    smooth={true} 
-                                    duration={1000} 
-                                    offset={-70} 
-                                    activeClass={classes.active} 
-                                    onClick={ toggleSideDrawer }>
-                                        {navItem.label}
-                                </Link>
+                                <NavLink to={`/${navItem.id}`} activeClassName={classes.active} onClick={toggleSideDrawer}>
+                                    {navItem.label}
+                                </NavLink>
                             </li>
                         );
                     })

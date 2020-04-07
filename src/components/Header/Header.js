@@ -39,7 +39,6 @@ class Header extends Component {
     }
 
     toggleSideDrawer = () => {
-        console.log('Mobile pressed');
         this.setState( state => {
             return { displaySideDrawer: !state.displaySideDrawer }
         })
