@@ -161,25 +161,27 @@ class Testimonials extends Component {
 
                     <div className={classes.CarouselInner} id="carouselStrip"> 
                         <Testimonial 
-                            personName="3 Robert Nqwamla"
-                            companyName="Finance Company"
+                            personName="Robert Nqwamla"
+                            companyName="Get Money Services"
                             testimonialText="Spha was very professional, he kept me up to date with every part of the process."/>
                         <Testimonial
-                            personName="1 Siya Makamole"
-                            companyName="Physiotherapist"
-                            testimonialText="Spha was very professional, he kept me up to date with every part of the process." />
+                            personName="Seana Makamole"
+                            companyName="ANOCS Physiotherapy"
+                            testimonialText="Professionalism and work ethic oozes from              the design and quality on these 
+                            business cards, highly commendable." />
                         <Testimonial 
-                            personName="2 Emma Strydom"
-                            companyName="Riverside Lodge"
-                            testimonialText="Spha is always available when I need help, I would recommend him to any other company"/>
+                            personName="Luvuyo Mnguni"
+                            companyName=""
+                            testimonialText="Executed my request efficiently, demonstrating professionalism and expertise, right through to delivery.  I wouldn't hesitate to use him again."/>
                         <Testimonial 
-                            personName="3 Robert Nqwamla"
-                            companyName="Finance Company"
+                            personName="Robert Nqwamla"
+                            companyName="Get Money Services"
                             testimonialText="Spha was very professional, he kept me up to date with every part of the process."/>
                         <Testimonial
-                            personName="1 Siya Makamole"
-                            companyName="Physiotherapist"
-                            testimonialText="Spha was very professional, he kept me up to date with every part of the process." />
+                            personName="Seana Makamole"
+                            companyName="ANOCS Physiotherapy"
+                            testimonialText="Professionalism and work ethic oozes from              the design and quality on these 
+                            business cards, highly commendable." />
                     </div>
         
                 </div>

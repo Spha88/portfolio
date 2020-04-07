@@ -1,0 +1,43 @@
+h2 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.Gallery {
+    column-width: 320px;
+    column-gap: 15px;
+    width: 100%;
+}
+
+.Gallery figure {
+
+
+    background: #fefefe;
+    margin: 0 2px 15px;
+    transition: opacity .4s ease-in-out;
+    display: inline-block;
+    -webkit-column-break-inside: avoid;
+}
+
+.Gallery figure img {
+    width: 100%; height: auto;
+
+}
+
+.Gallery:hover figure:not(:hover) {
+    opacity: 0.8;
+}
+@media only screen and (max-width: 1024px) { 
+    .Gallery { column-gap: 15px; }
+    .Gallery figure { width: 100%; }
+}
+
+@media only screen and (max-width: 750px) { 
+    .Gallery { column-gap: 15px; }
+    .Gallery figure { width: 100%; }
+}
+
+@media only screen and (max-width: 736px) { 
+    .Gallery { column-gap: 15px;}
+    .Gallery figure { width: 100% !important; }
+}

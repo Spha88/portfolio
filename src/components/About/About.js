@@ -28,10 +28,10 @@ class About  extends Component {
                 <div className={classes.aboutUsContainer} id="aboutContainer">
                     <div style={{ width: `${this.state.containerWidth}px` }} className={classes.backgroundImage}></div>
                     <div className={classes.content}>
-                        <h5>My short story</h5>
-                        <h1>I'm a freelancing Web <span className={classes.lineThrough}>designer</span> and developer</h1>
-                        <p>When I started I never thought I would get hooked into this field, I just wanted to help my partner forward slash other half, market her business. As a business student I knew one of the most effective ways was a website. I did some research and came across a simple guideline on how to create a web page using HTML, next thing I was on CSS, then JavaScript, that was it. </p>
-                        <p>I created her website then moved on to create for other clients, from there I went on to learn other web design tools such as Photoshop and Illustrator. </p>
+                        <h5>My story</h5>
+                        <h1>I'm a freelancing Web designer and developer</h1>
+                        <p>When I started I never thought I would get hooked in this art, I was just trying to help a friend market her business. As a business student I knew one of the most effective ways was online marketing. We didn't have the money to pay for a website, so I did some research and came across a simple guideline on how to create a web page using HTML, next thing I was learning CSS. When I started using JavaScript I knew I found something interesting and I loved it. </p>
+                        <p>I created her website then moved on to create for other clients, from there I went on to learn other web design tools and technologies. </p>
                     </div>
                 </div>
             </Container>

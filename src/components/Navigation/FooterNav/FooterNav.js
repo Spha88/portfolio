@@ -25,7 +25,7 @@ const FooterNav = () => {
                                 activeClass={classes.active} 
                                 onClick={()=> history.push(`/${navItem.id}`)}> 
                                     <span className={classes.Label}>{navItem.label}</span>
-                            </Link>
+                            </Link> 
                         </li>
                     );
                 })

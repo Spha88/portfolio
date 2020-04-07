@@ -4,9 +4,10 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header/Header';
-import Portfolio from './components/Portfolio/Portfolio';
 import Footer from './components/Footer/Footer';
 import HomePage from './containers/HomePage/HomePage';
+import PortfolioPage from './containers/PortfolioPage/PortfolioPage';
+
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
 
       <Switch>
 
-        <Route path="/portfolio/all" component={ Portfolio } />
+        <Route path="/portfolio/all" component={ PortfolioPage } />
         <Route path="/:section" component={ HomePage } />
         <Route path="/" component={ HomePage } />
 

@@ -12,17 +12,15 @@ const Services = props => {
             <div className={classes.ServiceItems}>
                 <Service
                     number="01" 
-                    title="Web and Graphic Design"
-                    content="From websites, logos, pamphlets, business cards, billboards, 
-                            calendars and other graphic work. I always make sure to involve my 
-                            clients when I am working on a design to create a product that not only 
-                            satisfies the client but is also artistically excellent." />
+                    title="Web Design and Development"
+                    content="I design and develop responsive websites using current web technologies. 
+                            If you need a website that will give your project or business an online presence, talk to me" />
                 <Service
                      number="02"
-                    title="Development"
-                    content="I develop all kinds of websites for, one page, multi-page, 
-                            Content Management Systems (CMS) and I always make sure 
-                            my websites meet the requirements of a modern and functional website." />
+                    title="Graphic Design"
+                    content="Every business needs a corporate identity, a logo that is unique and can be easily integrated in all marketing campaigns
+                    , printed or digital. Choosing the right colors and fonts for your kind of business is very important" />
+
                 <Service
                     number="03"  
                     title="Branding"
@@ -35,8 +33,7 @@ const Services = props => {
                     title="Marketing"
                     content="I provide an online presence for businesses through SEO and social media 
                             integration into websites, increasing traffic on both websites and social media 
-                            platforms. We stand on the brink of a technology revolution, 4th industrial revolution 
-                            and now more than ever, online marketing has become vital as people consume content 
+                            platforms. We stand on the brink of a technology revolution, online marketing has become vital as people consume content 
                             through the web and related technologies." />
             </div>
         </Container>

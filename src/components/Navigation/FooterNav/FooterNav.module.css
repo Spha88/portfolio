@@ -28,3 +28,9 @@
 .FooterNav ul li a.active {
     font-weight: bold;
 }
+
+@media only screen and (max-width: 425px) {
+    .FooterNav {
+        display: none;
+    }
+}
