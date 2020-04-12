@@ -6,7 +6,7 @@ import Testimonial from './Testimonial/Testimonial';
 
 import portrait_one from '../../assets/images/portrait-one.jpg';
 import portrait_two from '../../assets/images/portrait-two.jpg';
-import portrait_three from '../../assets/images/portrait-three.jpg';
+import portrait_three from '../../assets/images/portrait-three.jpg'; 
 
 class Testimonials extends Component {
 
@@ -22,6 +22,11 @@ class Testimonials extends Component {
         // Set the width of the slides to be equal to that of the parent div
         for (let i = 0; i < slides.length; i++) slides[i].style.width = carouselContainerWidth + 'px';
 
+        // Track the size of the parent div on resize and set the slides to that side again
+        window.addEventListener('resize', () => {
+            for (let i = 0; i < slides.length; i++) slides[i].style.width = carouselContainer.offsetWidth+ 'px';
+        })
+
         // Height of the
         let firstChildHeight = carouselContainer.children[1].offsetHeight;
         let lastChildHeight = carouselContainer.lastElementChild.offsetHeight;
@@ -30,6 +35,7 @@ class Testimonials extends Component {
     }
 
     componentDidMount() {
+
         this.bootUpSlide();
         
         let slideContainer = document.getElementById('carouselInner');

@@ -1,6 +1,5 @@
 .CarouselItem {
     text-align: center;
-    /* border:1px solid yellow; */
     padding: 20px;
 }
 
@@ -30,6 +29,7 @@
 @media only screen and (max-width: 425px) {
     .CarouselItem .TestimonialContent {
         width: 100%;
+        font-size: .8em;
     }
 
     .CompanyName {

@@ -15,7 +15,7 @@ const Hero = props => {
             </div>
             
             <div className={classes.Slogan}>
-                <h2 className={classes.cursive}> Web Design & </h2>
+                <h2 className={classes.cursive}> Web Design & </h2> 
                 <h2>Development</h2> 
             </div>
 

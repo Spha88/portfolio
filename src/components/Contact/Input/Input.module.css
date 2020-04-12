@@ -1,0 +1,22 @@
+.FormGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.FormGroup label {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+.FormGroup input,
+.FormGroup textarea {
+    padding: 7px;
+    border: 1px solid #C0C0C0;
+    outline: none;
+    resize: none;
+    font-family: inherit !important;
+    font-size: .9em;
+}

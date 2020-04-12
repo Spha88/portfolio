@@ -76,16 +76,16 @@
 
 @media only screen and (max-width: 425px){
     .Hero .Slogan h2:nth-child(1){
-        font-size: 2em;
+        font-size: 2.5em;
     }
     .Hero .Slogan h2:nth-child(2){
-        font-size: 1em;
+        font-size: 2em;
     }
     .Hero .SocialMedia {
         justify-content: center;
         align-items: flex-end;
         padding: 20px;
-        height: 200px;
+        height: 245px;
     }
     .SocialMedia ul {
         display: flex;

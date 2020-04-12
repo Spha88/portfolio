@@ -9,6 +9,7 @@ import Services from '../../components/Services/Services';
 import Portfolio from '../../components/Portfolio/Portfolio';
 import Testimonials from '../../components/Testimonials/Testimonials';
 import SideNav from '../../components/Navigation/SideNav/SideNav';
+import Contact from '../../components/Contact/Contact';
 
 
 const HomePage = props => {
@@ -32,6 +33,7 @@ const HomePage = props => {
                 <Services />
                 <Portfolio />
                 <Testimonials />
+                <Contact />
                 <SideNav />
             </React.Fragment>
         );

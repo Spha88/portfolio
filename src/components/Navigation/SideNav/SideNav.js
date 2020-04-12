@@ -8,6 +8,7 @@ import { useHistory } from 'react-router-dom';
     This component uses react-scroll links to smoothly scroll the page to the different section,
     attached to each link is a click event that uses history.push to change the url to meet the relevant section. 
     I used to react-scroll because it updates the bullets and active class. 
+
 */
 
 const SideNav = props => {
@@ -16,8 +17,8 @@ const SideNav = props => {
 
     return (
         <div className={classes.SideNav}>
-            <ul>
-                <li>
+            <ul id="navList">
+                <li id="home">
                     <Link 
                         to="home" 
                         spy={true} smooth={true} 
@@ -31,7 +32,7 @@ const SideNav = props => {
 
                 { navItems.map( navItem => {
                     return (
-                        <li key={navItem.id}>
+                        <li key={navItem.id} id={navItem.id}>
                             <Link 
                                 to={navItem.id} 
                                 spy={true} smooth={true}  

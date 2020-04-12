@@ -14,6 +14,7 @@ const SideDrawer = props => {
 
     return ( 
         <nav className={sideDrawerClasses.join(' ')}>
+        
             <ul>
                 { 
                     navItems.map( navItem => {
@@ -27,6 +28,7 @@ const SideDrawer = props => {
                     })
                 }
             </ul>
+
             <OverLay click={ toggleSideDrawer } /> 
             
         </nav>

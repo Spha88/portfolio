@@ -8,6 +8,7 @@ const navItems = [
             {label: "Skills", id: "skills"}, 
             {label: "my Services", id: "services"}, 
             {label: "Portfolio", id: "portfolio"}, 
-            {label: "Testimonials", id: "testimonials"}
+            {label: "Testimonials", id: "testimonials"},
+            {label: "Contact Us", id: "contact"}
         ]
 export default navItems;

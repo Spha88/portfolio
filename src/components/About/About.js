@@ -6,7 +6,7 @@ import Container from '../UI/Container/Container';
 class About  extends Component {
 
     state = {
-        containerWidth: 0
+        containerWidth: 0 
     }
 
     prepareComponent = () => {
