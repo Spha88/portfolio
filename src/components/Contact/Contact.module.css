@@ -1,5 +1,5 @@
 .ContactContainer {
-    background: #000 url(../../assets/images/phone.jpeg) no-repeat center;
+    background: #000 url(../../assets/images/phone.jpeg) no-repeat fixed center;
     background-size: cover;
     padding: 20px 20px;
     position: relative;
