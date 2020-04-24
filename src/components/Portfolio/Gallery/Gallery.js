@@ -1,18 +1,29 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { images } from './GalleryItemList';
 import Container from '../../UI/Container/Container';
-import classes from './Gallery.module.css';
+import './Gallery.module.css';
+import scrollreveal from 'scrollreveal';
 
 const Gallery = () => {
 
+    useEffect(() => {
+        const options = { distance: '100%', delay: '500', origin: 'bottom', duration: '1000', reset: false }
+        scrollreveal().reveal('#item', options)
+    })
+    
     return (
         <Container>
             <h2>Gallery</h2>
-            <div className={classes.Gallery} id="gallery"> {
+            <div className={" card-columns"} id="gallery"> {
                 images.map( (image, index) => {
                     return (
-                        <figure key={image.url}>
-                            <img src={image.url} alt={`portfolio item ${index}`}/>
+                        <figure key={index} className="card" id="item">
+                            <img src={image.url} alt={`portfolio item ${index}`} className="card-img-top" />
+                            { image.caption ? (
+                                <div className="card-body">
+                                    <p className="card-text">{image.caption}</p>
+                                </div>
+                            ) : null }
                         </figure>
                     );
                 })
@@ -22,5 +33,3 @@ const Gallery = () => {
 }
 
 export default Gallery;
-
-

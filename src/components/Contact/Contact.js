@@ -9,7 +9,8 @@ export const Contact = () => {
         distance: '150%',
         origin: 'left',
         delay: '500',
-        duration: '1500'
+        duration: '1500',
+        easing: 'cubic-bezier(0.5, 0, 0, 1)'
     };
 
     scrollReveal().reveal('#contactForm', options);
