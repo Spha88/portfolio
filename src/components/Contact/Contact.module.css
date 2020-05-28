@@ -1,5 +1,6 @@
 .ContactContainer {
-    background: #000 url(../../assets/images/phone.jpeg) no-repeat fixed center;
+    background: #000 url(../../assets/images/phone.jpeg) no-repeat fixed center
+        center;
     background-size: cover;
     padding: 20px 20px;
     position: relative;
@@ -12,4 +13,10 @@
     margin: 0 auto;
     position: relative;
     z-index: 2;
+}
+
+@media only screen and (max-width: 768px) {
+    .ContactContainer {
+        background-attachment: initial;
+    }
 }
