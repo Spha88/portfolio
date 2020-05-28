@@ -3,37 +3,37 @@ import classes from './Footer.module.css';
 
 import SocialMedia from './SocialMedia/SocialMedia';
 import ContactDetails from './ContactDetails/ContactDetails';
-import PortfolioSmall from './PortfolioSmall/PortfolioSmall';
 import FooterNav from '../../components/Navigation/FooterNav/FooterNav';
 
 const Footer = props => {
-    
-    return ( 
-        <footer className={classes.Footer} id="contact">
-
+    return (
+        <footer className={classes.Footer} id='contact'>
             <div className={classes.FooterInner}>
                 <div className={classes.FooterSections}>
                     <div>
                         <SocialMedia />
                     </div>
                     <div>
-                        <ContactDetails />  
+                        <ContactDetails />
                     </div>
                     <div>
-                        <PortfolioSmall />
+                        <FooterNav />
                     </div>
                 </div>
             </div>
 
-            <FooterNav />
-            
             <div className={classes.lastRow}>
-                <p><a href="http://www.netslate.co.za/">Developed during the 21 days of Lock-down by yours truly</a></p>
-                <p><a href="http://www.netslate.co.za/">Spha</a></p>
+                <p>
+                    <a href='http://www.netslate.co.za/'>
+                        Developed during the 21 days of Lock-down by
+                    </a>
+                </p>
+                <p>
+                    <a href='http://www.netslate.co.za/'>Spha</a>
+                </p>
             </div>
-            
         </footer>
     );
-}
- 
+};
+
 export default Footer;
