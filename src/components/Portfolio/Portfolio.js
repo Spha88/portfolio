@@ -20,43 +20,53 @@ import document_5 from '../../assets/documents/project_5.pdf';
 import document_6 from '../../assets/documents/project_6.pdf';
 
 const Portfolio = props => {
-
     let location = useLocation();
 
-    return ( 
-        <Container id="portfolio">
+    return (
+        <Container id='portfolio'>
             <header className={classes.PortfolioHeader}>
-                    <h1>Clients and Work</h1>
-                    { location.pathname !== '/portfolio/all' ? <Link to="portfolio/all"><Button label="View all" /></Link> : null }
+                <h1>Clients and Work</h1>
+                {location.pathname !== '/portfolio/all' ? (
+                    <Link to='portfolio/all'>
+                        <Button label='View all' />
+                    </Link>
+                ) : null}
             </header>
             <div className={classes.PortfolioThumbnails}>
                 <PortfolioItem
-                    link="http://jakstrydom.com/"
+                    link='http://jakstrydom.com/'
                     backgroundImage={bg_portfolio_1}
                 />
                 <PortfolioItem
                     link={document_2}
                     backgroundImage={bg_portfolio_2}
                 />
-                <PortfolioItem 
-                    link="http://riversidelodgealiwalnorth.co.za/"
+                <PortfolioItem
+                    link='http://riversidelodgealiwalnorth.co.za/'
                     backgroundImage={bg_portfolio_3}
                 />
                 <PortfolioItem
                     link={document_4}
                     backgroundImage={bg_portfolio_4}
                 />
-                <PortfolioItem 
+                <PortfolioItem
                     link={document_5}
                     backgroundImage={bg_portfolio_5}
                 />
                 <PortfolioItem
-                    link={document_6} 
+                    link={document_6}
                     backgroundImage={bg_portfolio_6}
                 />
             </div>
+            <div className={classes.Footer}>
+                {location.pathname !== '/portfolio/all' ? (
+                    <Link to='portfolio/all'>
+                        <Button label='View all' />
+                    </Link>
+                ) : null}
+            </div>
         </Container>
-     );
-}
- 
+    );
+};
+
 export default Portfolio;

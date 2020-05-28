@@ -178,7 +178,6 @@ class Testimonials extends Component {
                                 <i className='fas fa-chevron-left'></i>
                             </span>
                         </div>
-                        info@cielo.co.za
                     </div>
 
                     <ul className={classes.CarouselIndicators}>

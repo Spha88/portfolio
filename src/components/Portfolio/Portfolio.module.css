@@ -8,11 +8,28 @@
 
 .PortfolioHeader h1 {
     margin: 0;
+}
 
+@media screen and (max-width: 425px) {
+    .PortfolioHeader a {
+        display: none;
+    }
 }
 
 .PortfolioThumbnails {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.Footer {
+    text-align: right;
+    padding: 10px 5px;
+    display: none;
+}
+
+@media screen and (max-width: 425px) {
+    .Footer {
+        display: block;
+    }
 }
