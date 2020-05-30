@@ -1,0 +1,65 @@
+.Nav {
+    margin: 0 20px;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li a {
+            display: inline-block;
+            position: relative;
+            margin: 2px 5px;
+            padding: 0 10px;
+            background-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 500ms ease-in-out;
+            cursor: pointer;
+            &:before,
+            &:after {
+                display: block;
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 0;
+                z-index: 1;
+                background-color: #333;
+                transition: all 500ms ease-in;
+            }
+            &:before {
+                top: 0;
+                left: 0;
+            }
+            &:after {
+                bottom: 0;
+                right: 0;
+            }
+            &.active {
+                font-weight: 900;
+                color: #000;
+                &:before {
+                    height: 100%;
+                }
+                &:after {
+                    height: 100%;
+                }
+            }
+        }
+        li:hover a {
+            font-weight: bold;
+        }
+    }
+}
+
+/* class controlled by state */
+.DisplayNav {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .Nav {
+        display: none;
+    }
+}
