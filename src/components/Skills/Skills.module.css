@@ -1,15 +1,15 @@
 h1.SkillsHeading {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .SkillsList {
     width: 100%;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 425px){
-    h1.SkillsHeading{
+@media only screen and (max-width: 425px) {
+    h1.SkillsHeading {
         margin: 10px 20px;
     }
 }
