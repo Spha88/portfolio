@@ -1,0 +1,55 @@
+.Button {
+    position: relative;
+    border: 1px solid #333;
+    background-color: #fff;
+    margin: 5px;
+    padding: 5px 20px;
+    color: #333;
+    font-family: inherit;
+    size: 1.2rem;
+    min-width: 160px;
+    min-height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 1000ms ease-in;
+    overflow: hidden;
+    &:focus {
+        outline: 0;
+    }
+    &:before,
+    &:after {
+        display: block;
+        position: absolute;
+        height: 100%;
+        content: 'Send';
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 300ms ease-in;
+    }
+    &:before {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    &:after {
+        height: 100%;
+        width: 100%;
+        bottom: -100%;
+        left: 0;
+        color: #fff;
+        background-color: #333;
+    }
+    &:hover {
+        &:before {
+            top: -100%;
+        }
+        &:after {
+            bottom: 0;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.Button {
+    position: relative;
+    border: none;
+    margin: 5px;
+    padding: 5px 20px;
+    background-color: transparent;
+    color: #333;
+    size: 1.2rem;
+    min-width: 160px;
+    min-height: 40px;
+    border: 1px solid #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        transition: all 300ms ease-in;
+        background: #333;
+        bottom: 0;
+        height: 100%;
+        width: 0;
+        z-index: -1;
+        font-family: inherit;
+    }
+    &:before {
+        left: 0;
+    }
+    &:after {
+        right: 0;
+    }
+    &:hover {
+        color: #fff;
+        letter-spacing: 2px;
+        font-weight: 400;
+        &:before {
+            width: 50%;
+        }
+        &:after {
+            width: 50%;
+        }
+    }
+    &:focus {
+        outline: 0;
+    }
+}

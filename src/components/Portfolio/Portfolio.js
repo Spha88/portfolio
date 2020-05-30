@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import Container from '../UI/Container/Container';
 import PortfolioItem from './PortfolioItem/PortfolioItem';
-import Button from '../UI/Button/Button';
+import { Button2 } from '../UI/Button2/Button2';
 
 import bg_portfolio_1 from '../../assets/images/bg_portfolio_1.png';
 import bg_portfolio_2 from '../../assets/images/bg_portfolio_2.png';
@@ -28,7 +28,7 @@ const Portfolio = props => {
                 <h1>Clients and Work</h1>
                 {location.pathname !== '/portfolio/all' ? (
                     <Link to='portfolio/all'>
-                        <Button label='View all' />
+                        <Button2 label='View all' />
                     </Link>
                 ) : null}
             </header>
@@ -61,7 +61,7 @@ const Portfolio = props => {
             <div className={classes.Footer}>
                 {location.pathname !== '/portfolio/all' ? (
                     <Link to='portfolio/all'>
-                        <Button label='View all' />
+                        <Button2 label='View all' />
                     </Link>
                 ) : null}
             </div>
