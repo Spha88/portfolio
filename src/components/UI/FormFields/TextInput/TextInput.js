@@ -27,8 +27,6 @@ const TextInput = ({ name, label }) => {
             }
         }
 
-        setCharsRemaining(50 - userName.length);
-
         // Make sure name is not too short
         if (userName.length > 0 && userName.length <= 3) {
             setError(true);
@@ -36,10 +34,16 @@ const TextInput = ({ name, label }) => {
         } else if (!validator.isEmpty(userName)) {
             setError(false);
         }
+
+        setCharsRemaining(50 - userName.length);
     }, [userName, inputChanged, error, charsRemaining]);
 
+    // Change the color of border and messages to warning red validation fails
     let formGroupClasses = [classes.FormGroup];
     error && formGroupClasses.push(classes.Error);
+
+    // change border-color to green if the input field passes validation
+    inputChanged && !error && formGroupClasses.push(classes.Acceptable);
 
     return (
         <div className={formGroupClasses.join(' ')}>
