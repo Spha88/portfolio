@@ -1,0 +1,51 @@
+.FormGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    position: relative;
+    label {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    input {
+        padding: 7px;
+        margin-top: 3px;
+        border: 1px solid #c0c0c0;
+        outline: none;
+        resize: none;
+        font-family: inherit !important;
+        font-size: 0.9em;
+        transition: all 300 ease-out;
+    }
+    .ErrorMsgContainer {
+        min-height: 30px;
+        padding: 0;
+        margin: 0;
+    }
+    .CharsRemaining {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        line-height: 25px;
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+    .FewCharsRemaining {
+        color: red;
+    }
+}
+
+.Error {
+    input {
+        border-color: red;
+    }
+    .ErrorMsgContainer {
+        color: red;
+    }
+}
