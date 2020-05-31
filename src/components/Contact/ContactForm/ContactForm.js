@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './ContactForm.module.css';
 import TextInput from '../../UI/FormFields/TextInput/TextInput';
 import { Button50 } from '../../UI/Button50/Button50';
+import EmailInput from '../../UI/FormFields/EmailInput/EmailInput';
 
 export default class ContactForm extends Component {
     state = {
@@ -25,8 +26,8 @@ export default class ContactForm extends Component {
         window.emailjs.send(service_id, template_id, template_params);
     };
 
-    inputFieldChangeHandler = e =>
-        this.setState({ [e.target.name]: e.target.value });
+    updateContactFormDetails = (statePro, value) =>
+        this.setState({ [statePro]: value });
 
     render() {
         let { name } = this.state;
@@ -38,7 +39,12 @@ export default class ContactForm extends Component {
                         label='Name'
                         name='name'
                         value={name}
-                        change={this.inputFieldChangeHandler}
+                        updateDetails={this.updateContactFormDetails}
+                    />
+                    <EmailInput
+                        label='Email'
+                        name='email'
+                        updateDetails={this.updateContactFormDetails}
                     />
                     <div className={classes.SendBtnContainer}>
                         <Button50 />

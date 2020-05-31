@@ -1,43 +1,51 @@
 import React, { useState, useEffect } from 'react';
-import classes from './TextInput.module.scss';
+import classes from './EmailInput.module.scss';
 import validator from 'validator';
 
-const TextInput = ({ name, label, updateDetails }) => {
-    let [userName, setUserName] = useState('');
+const EmailInput = ({ name, label, updateDetails }) => {
+    let [userEmail, setUserEmail] = useState('');
     let [inputChanged, setInputChange] = useState(false);
     let [error, setError] = useState(false);
     let [errorMessage, setErrorMessage] = useState('');
-    let [charsRemaining, setCharsRemaining] = useState(50);
+    let [charsRemaining, setCharsRemaining] = useState(40);
 
     const inputChangeHandler = e => {
         setInputChange(true);
-        let value = e.target.value;
-        value.length < 51 && setUserName(value);
+        let value = e.target.value.trim();
+        value.length < 41 && setUserEmail(value);
+    };
+
+    const validateEmail = e => {
+        // Make sure it is a valid email address
+        if (inputChanged && !validator.isEmail(userEmail)) {
+            setError(true);
+            setErrorMessage('Enter a valid email address');
+        } else if (!validator.isEmpty(userEmail)) {
+            setError(false);
+
+            // send input field value to contact form
+            updateDetails('email', userEmail);
+            //-------------------------------------------
+        }
+
+        validator.isEmpty(userEmail) && setErrorMessage('Email Required');
     };
 
     useEffect(() => {
         if (inputChanged) {
             // validate empty
-            if (validator.isEmpty(userName)) {
-                setErrorMessage('Name is required');
+            if (validator.isEmpty(userEmail)) {
+                setErrorMessage('Email is required');
                 setError(true);
             } else {
                 setErrorMessage('');
-                setError(false);
             }
-        }
 
-        // Make sure name is not too short
-        if (userName.length > 0 && userName.length <= 3) {
-            setError(true);
-            setErrorMessage('Name too short');
-        } else if (!validator.isEmpty(userName)) {
-            setError(false);
-            updateDetails('name', userName);
+            validator.isEmail(userEmail) ? setError(false) : setError(true);
+            !validator.isEmail(userEmail) && updateDetails('email', '');
         }
-
-        setCharsRemaining(50 - userName.length);
-    }, [userName, inputChanged, error, charsRemaining]);
+        setCharsRemaining(40 - userEmail.length);
+    }, [userEmail, inputChanged, error, charsRemaining]);
 
     // Change the color of border and messages to warning red validation fails
     let formGroupClasses = [classes.FormGroup];
@@ -51,9 +59,11 @@ const TextInput = ({ name, label, updateDetails }) => {
             {label && <label htmlFor={name}>{label}</label>}
             <input
                 type='text'
-                value={userName}
+                name={name}
+                value={userEmail}
                 onChange={inputChangeHandler}
                 onFocus={inputChangeHandler}
+                onBlur={validateEmail}
             />
             <div className={classes.ErrorMsgContainer}>
                 {errorMessage.length !== '' && <span>{errorMessage}</span>}
@@ -69,4 +79,4 @@ const TextInput = ({ name, label, updateDetails }) => {
     );
 };
 
-export default TextInput;
+export default EmailInput;
