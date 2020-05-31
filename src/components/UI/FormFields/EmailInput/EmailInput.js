@@ -45,7 +45,7 @@ const EmailInput = ({ name, label, updateDetails }) => {
             !validator.isEmail(userEmail) && updateDetails('email', '');
         }
         setCharsRemaining(40 - userEmail.length);
-    }, [userEmail, inputChanged, error, charsRemaining]);
+    }, [userEmail, inputChanged, error, charsRemaining, updateDetails]);
 
     // Change the color of border and messages to warning red validation fails
     let formGroupClasses = [classes.FormGroup];

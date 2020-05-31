@@ -1,3 +1,5 @@
+@import '../../../Variables.scss';
+
 .ContactFormContainer {
     max-width: 400px;
     width: 100%;
@@ -5,10 +7,17 @@
     padding: 40px 30px;
     margin: 40px 0px;
     box-shadow: 6px 17px 84px rgba(0, 0, 0, 0.5);
-}
-
-.ContactFormContainer h1 {
-    margin: 0 0 20px;
+    h1 {
+        margin: 0;
+    }
+    .ErrorMsgContainer {
+        height: 25px;
+        padding-left: 1rem;
+        small {
+            font-weight: bold;
+            color: $warning-color;
+        }
+    }
 }
 
 .SendBtnContainer {

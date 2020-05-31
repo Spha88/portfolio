@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
-import classes from './ContactForm.module.css';
+import validator from 'validator';
+import classes from './ContactForm.module.scss';
 import TextInput from '../../UI/FormFields/TextInput/TextInput';
 import { Button50 } from '../../UI/Button50/Button50';
 import EmailInput from '../../UI/FormFields/EmailInput/EmailInput';
+import TextArea from '../../UI/FormFields/TextArea/TextArea';
 
 export default class ContactForm extends Component {
     state = {
         name: '',
         email: '',
         message: '',
+        errorMessage: '',
     };
     submitHandler = e => {
         e.preventDefault();
         let { name, email, message } = this.state;
+        if (
+            validator.isEmpty(name) ||
+            validator.isEmpty(email) ||
+            validator.isEmpty(message)
+        ) {
+            this.setState({ errorMessage: 'Fill in all the fields' });
+            return;
+        }
 
         let template_params = {
             reply_to: email,
@@ -30,15 +41,17 @@ export default class ContactForm extends Component {
         this.setState({ [statePro]: value });
 
     render() {
-        let { name } = this.state;
+        let { errorMessage } = this.state;
         return (
             <div className={classes.ContactFormContainer}>
                 <h1>Get in touch</h1>
+                <div className={classes.ErrorMsgContainer}>
+                    {errorMessage && <small>{errorMessage}</small>}
+                </div>
                 <form onSubmit={this.submitHandler}>
                     <TextInput
                         label='Name'
                         name='name'
-                        value={name}
                         updateDetails={this.updateContactFormDetails}
                     />
                     <EmailInput
@@ -46,6 +59,11 @@ export default class ContactForm extends Component {
                         name='email'
                         updateDetails={this.updateContactFormDetails}
                     />
+                    <TextArea
+                        label='Message'
+                        updateDetails={this.updateContactFormDetails}
+                    />
+
                     <div className={classes.SendBtnContainer}>
                         <Button50 />
                     </div>

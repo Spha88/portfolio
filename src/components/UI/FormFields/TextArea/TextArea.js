@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import classes from './TextInput.module.scss';
+import classes from './TextArea.module.scss';
 import validator from 'validator';
 
-const TextInput = ({ name, label, updateDetails }) => {
-    let [userName, setUserName] = useState('');
+const TextArea = ({ name, label, updateDetails }) => {
+    let [userMessage, setUserMessage] = useState('');
     let [inputChanged, setInputChange] = useState(false);
     let [error, setError] = useState(false);
     let [errorMessage, setErrorMessage] = useState('');
-    let [charsRemaining, setCharsRemaining] = useState(50);
+    let [charsRemaining, setCharsRemaining] = useState(200);
 
     const inputChangeHandler = e => {
         setInputChange(true);
         let value = e.target.value;
-        value.length < 51 && setUserName(value);
+        value.length < 201 && setUserMessage(value);
     };
 
     useEffect(() => {
         if (inputChanged) {
             // validate empty
-            if (validator.isEmpty(userName)) {
-                setErrorMessage('Name is required');
+            if (validator.isEmpty(userMessage)) {
+                setErrorMessage('Message is required');
                 setError(true);
             } else {
                 setErrorMessage('');
@@ -27,17 +27,18 @@ const TextInput = ({ name, label, updateDetails }) => {
             }
         }
 
-        // Make sure name is not too short
-        if (userName.length > 0 && userName.length <= 3) {
+        // Make sure Message is not too short
+        if (userMessage.length > 0 && userMessage.length <= 15) {
             setError(true);
-            setErrorMessage('Name too short');
-        } else if (!validator.isEmpty(userName)) {
+            setErrorMessage('Message too short');
+            updateDetails('message', '');
+        } else if (!validator.isEmpty(userMessage)) {
             setError(false);
-            updateDetails('name', userName);
+            updateDetails('message', userMessage);
         }
 
-        setCharsRemaining(50 - userName.length);
-    }, [userName, inputChanged, error, charsRemaining, updateDetails]);
+        setCharsRemaining(200 - userMessage.length);
+    }, [userMessage, inputChanged, error, charsRemaining, updateDetails]);
 
     // Change the color of border and messages to warning red validation fails
     let formGroupClasses = [classes.FormGroup];
@@ -48,25 +49,26 @@ const TextInput = ({ name, label, updateDetails }) => {
 
     return (
         <div className={formGroupClasses.join(' ')}>
-            {label && <label htmlFor={name}>{label}</label>}
-            <input
+            {label && <label htmlFor='message'>{label}</label>}
+            <textarea
                 type='text'
-                value={userName}
+                name='message'
+                value={userMessage}
                 onChange={inputChangeHandler}
                 onFocus={inputChangeHandler}
-            />
+            ></textarea>
             <div className={classes.ErrorMsgContainer}>
                 {errorMessage.length !== '' && <span>{errorMessage}</span>}
             </div>
             <span
                 className={`${classes.CharsRemaining} ${
-                    charsRemaining < 11 && classes.FewCharsRemaining
+                    charsRemaining < 31 && classes.FewCharsRemaining
                 }`}
             >
-                {charsRemaining < 21 && charsRemaining}
+                {charsRemaining < 41 && charsRemaining}
             </span>
         </div>
     );
 };
 
-export default TextInput;
+export default TextArea;
