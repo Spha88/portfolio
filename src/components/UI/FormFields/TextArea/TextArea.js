@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import classes from './TextArea.module.scss';
 import validator from 'validator';
 
-const TextArea = ({ name, label, updateDetails }) => {
+const TextArea = ({ name, label, updateDetails, sent }) => {
     let [userMessage, setUserMessage] = useState('');
     let [inputChanged, setInputChange] = useState(false);
     let [error, setError] = useState(false);
@@ -18,7 +18,7 @@ const TextArea = ({ name, label, updateDetails }) => {
     useEffect(() => {
         if (inputChanged) {
             // validate empty
-            if (validator.isEmpty(userMessage)) {
+            if (validator.isEmpty(userMessage) && !sent) {
                 setErrorMessage('Message is required');
                 setError(true);
             } else {
@@ -28,7 +28,7 @@ const TextArea = ({ name, label, updateDetails }) => {
         }
 
         // Make sure Message is not too short
-        if (userMessage.length > 0 && userMessage.length <= 15) {
+        if (userMessage.length > 0 && userMessage.length <= 15 && !sent) {
             setError(true);
             setErrorMessage('Message too short');
             updateDetails('message', '');
@@ -37,8 +37,14 @@ const TextArea = ({ name, label, updateDetails }) => {
             updateDetails('message', userMessage);
         }
 
+        //clear field when email is sent
+        if (sent) {
+            setError(false);
+            setUserMessage('');
+        }
+
         setCharsRemaining(200 - userMessage.length);
-    }, [userMessage, inputChanged, error, charsRemaining, updateDetails]);
+    }, [userMessage, inputChanged, error, charsRemaining, updateDetails, sent]);
 
     // Change the color of border and messages to warning red validation fails
     let formGroupClasses = [classes.FormGroup];

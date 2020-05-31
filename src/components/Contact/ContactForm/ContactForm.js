@@ -12,6 +12,7 @@ export default class ContactForm extends Component {
         email: '',
         message: '',
         errorMessage: '',
+        sent: false,
     };
     submitHandler = e => {
         e.preventDefault();
@@ -25,6 +26,7 @@ export default class ContactForm extends Component {
             return;
         }
 
+        //Send email
         let template_params = {
             reply_to: email,
             from_name: name,
@@ -35,31 +37,55 @@ export default class ContactForm extends Component {
         let service_id = 'default_service';
         let template_id = 'template_qgWb1eio';
         window.emailjs.send(service_id, template_id, template_params);
+        //=============================================================
+
+        this.setState({
+            sent: true,
+            name: '',
+            email: '',
+            message: '',
+        });
     };
 
-    updateContactFormDetails = (statePro, value) =>
+    updateContactFormDetails = (statePro, value) => {
+        let { name, email, message } = this.state;
         this.setState({ [statePro]: value });
+        if (
+            !validator.isEmpty(name) ||
+            !validator.isEmpty(email) ||
+            !validator.isEmpty(message)
+        ) {
+            this.setState({ errorMessage: '' });
+        }
+    };
 
     render() {
-        let { errorMessage } = this.state;
+        let { errorMessage, sent } = this.state;
         return (
-            <div className={classes.ContactFormContainer}>
+            <div
+                className={`${classes.ContactFormContainer} ${
+                    sent && classes.sent
+                }`}
+            >
                 <h1>Get in touch</h1>
                 <div className={classes.ErrorMsgContainer}>
                     {errorMessage && <small>{errorMessage}</small>}
                 </div>
                 <form onSubmit={this.submitHandler}>
                     <TextInput
+                        sent={sent}
                         label='Name'
                         name='name'
                         updateDetails={this.updateContactFormDetails}
                     />
                     <EmailInput
+                        sent={sent}
                         label='Email'
                         name='email'
                         updateDetails={this.updateContactFormDetails}
                     />
                     <TextArea
+                        sent={sent}
                         label='Message'
                         updateDetails={this.updateContactFormDetails}
                     />

@@ -1,6 +1,7 @@
 @import '../../../Variables.scss';
 
 .ContactFormContainer {
+    position: relative;
     max-width: 400px;
     width: 100%;
     background: rgba(255, 255, 255, 0.904);
@@ -16,6 +17,33 @@
         small {
             font-weight: bold;
             color: $warning-color;
+            font-size: 1em;
+        }
+    }
+    &:before {
+        content: 'Your message was sent, I will get back to you soon. :)';
+        justify-content: center;
+        align-items: center;
+        box-shadow: 6px 17px 84px rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        top: 5%;
+        left: 5%;
+        display: none;
+        z-index: -1;
+        font-size: 2rem;
+        text-align: center;
+        // font-family: 'Dancing Script', cursive;
+        color: #333;
+        background-color: #fff;
+    }
+    &.sent {
+        &:before {
+            animation: sent 1500ms ease-in-out;
+            z-index: 500;
+            display: flex;
         }
     }
 }
@@ -24,4 +52,25 @@
     text-align: right;
     height: 43px;
     padding-top: 10px;
+}
+
+@keyframes sent {
+    0% {
+        left: 5%;
+        z-index: -1;
+        transform: rotateY(0) skewY(0);
+        display: flex;
+    }
+    50% {
+        left: 120%;
+        z-index: 0;
+        transform: rotateY(60deg) skewY(10deg);
+        display: flex;
+    }
+    100% {
+        left: 5%;
+        z-index: 500;
+        transform: rotateY(0) skewY(0);
+        display: flex;
+    }
 }

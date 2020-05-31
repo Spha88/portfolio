@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import classes from './TextInput.module.scss';
 import validator from 'validator';
 
-const TextInput = ({ name, label, updateDetails }) => {
+const TextInput = ({ name, label, updateDetails, sent }) => {
     let [userName, setUserName] = useState('');
     let [inputChanged, setInputChange] = useState(false);
     let [error, setError] = useState(false);
@@ -18,7 +18,7 @@ const TextInput = ({ name, label, updateDetails }) => {
     useEffect(() => {
         if (inputChanged) {
             // validate empty
-            if (validator.isEmpty(userName)) {
+            if (validator.isEmpty(userName) && !sent) {
                 setErrorMessage('Name is required');
                 setError(true);
             } else {
@@ -28,7 +28,7 @@ const TextInput = ({ name, label, updateDetails }) => {
         }
 
         // Make sure name is not too short
-        if (userName.length > 0 && userName.length <= 3) {
+        if (userName.length > 0 && userName.length <= 3 && !sent) {
             setError(true);
             setErrorMessage('Name too short');
         } else if (!validator.isEmpty(userName)) {
@@ -37,7 +37,13 @@ const TextInput = ({ name, label, updateDetails }) => {
         }
 
         setCharsRemaining(50 - userName.length);
-    }, [userName, inputChanged, error, charsRemaining, updateDetails]);
+
+        if (sent) {
+            setError(false);
+            setErrorMessage('');
+            setUserName('');
+        }
+    }, [userName, inputChanged, error, charsRemaining, updateDetails, sent]);
 
     // Change the color of border and messages to warning red validation fails
     let formGroupClasses = [classes.FormGroup];

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import classes from './EmailInput.module.scss';
 import validator from 'validator';
 
-const EmailInput = ({ name, label, updateDetails }) => {
+const EmailInput = ({ name, label, updateDetails, sent }) => {
     let [userEmail, setUserEmail] = useState('');
     let [inputChanged, setInputChange] = useState(false);
     let [error, setError] = useState(false);
@@ -17,7 +17,7 @@ const EmailInput = ({ name, label, updateDetails }) => {
 
     const validateEmail = e => {
         // Make sure it is a valid email address
-        if (inputChanged && !validator.isEmail(userEmail)) {
+        if (inputChanged && !validator.isEmail(userEmail) && !sent) {
             setError(true);
             setErrorMessage('Enter a valid email address');
         } else if (!validator.isEmpty(userEmail)) {
@@ -28,13 +28,15 @@ const EmailInput = ({ name, label, updateDetails }) => {
             //-------------------------------------------
         }
 
-        validator.isEmpty(userEmail) && setErrorMessage('Email Required');
+        validator.isEmpty(userEmail) &&
+            !sent &&
+            setErrorMessage('Email Required');
     };
 
     useEffect(() => {
         if (inputChanged) {
             // validate empty
-            if (validator.isEmpty(userEmail)) {
+            if (validator.isEmpty(userEmail) && !sent) {
                 setErrorMessage('Email is required');
                 setError(true);
             } else {
@@ -45,7 +47,13 @@ const EmailInput = ({ name, label, updateDetails }) => {
             !validator.isEmail(userEmail) && updateDetails('email', '');
         }
         setCharsRemaining(40 - userEmail.length);
-    }, [userEmail, inputChanged, error, charsRemaining, updateDetails]);
+
+        if (sent) {
+            setError(false);
+            setErrorMessage('');
+            setUserEmail('');
+        }
+    }, [userEmail, inputChanged, error, charsRemaining, updateDetails, sent]);
 
     // Change the color of border and messages to warning red validation fails
     let formGroupClasses = [classes.FormGroup];
