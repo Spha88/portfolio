@@ -8,12 +8,12 @@ import image7 from '../../../assets/images/gallery/gallery_7.jpg'
 import image8 from '../../../assets/images/gallery/gallery_8.jpg'
 
 export const images = [
-    {url: image1, caption: 'Get Money Services billboard design'},
-    {url: image2, caption: 'Get Money Services cup with company logo'},
-    {url: image3, caption: 'Get Money Services logo mockup'},
-    {url: image4, caption: 'Saffron logo design presentation'},
-    {url: image5, caption: 'JAK Strydom WordPress Theme'},
-    {url: image6, caption: 'Family getaway pamphlet design'},
-    {url: image7, caption: 'ANOCS logo Design'},
-    {url: image8, caption: 'Covid-19 Statistics website'}
+    { src: image1, caption: 'Get Money Services billboard design' },
+    { src: image2, caption: 'Get Money Services cup with company logo' },
+    { src: image3, caption: 'Get Money Services logo mockup' },
+    { src: image4, caption: 'Saffron logo design presentation' },
+    { src: image5, caption: 'JAK Strydom WordPress Theme', url: 'http://jakstrydom.com/' },
+    { src: image6, caption: 'Family getaway pamphlet design' },
+    { src: image7, caption: 'ANOCS logo Design' },
+    { src: image8, caption: 'Covid-19 Statistics website' }
 ]
