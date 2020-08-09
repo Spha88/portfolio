@@ -20,8 +20,7 @@ const Gallery = () => {
                         <figure key={index} className="card" id="item">
                             {image.url ?
                                 <a href={image.url}><img src={image.src} alt={`portfolio item ${index}`} className="card-img-top" /></a>
-                                : <img src={image.src} alt={`portfolio item ${index}`} className="card-img-top" />
-                            }
+                                : <img src={image.src} alt={`portfolio item ${index}`} className="card-img-top" />}
 
                             {image.caption ? (
                                 <div className="card-body">
