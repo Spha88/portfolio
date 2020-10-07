@@ -11,6 +11,7 @@ import { Button50 } from '../../UI/Button50/Button50';
 const ContactForm = () => {
 
     const [sent, setSent] = useState(false);
+    const [showErrorMsg, setShowErrorMsg] = useState(false);
     const { register, handleSubmit, errors } = useForm();
 
     const onSubmit = data => {
@@ -26,11 +27,12 @@ const ContactForm = () => {
             }
         })
             .then(res => {
-                console.log('Message sent')
+                // console.log('Message sent')
                 document.getElementById('contact-form').reset();
                 setSent(true);
             })
             .catch(error => {
+                setShowErrorMsg(true);
                 console.log('Could not send message', error);
             })
 
@@ -40,6 +42,20 @@ const ContactForm = () => {
         <div className={`${classes.ContactFormContainer} ${sent && classes.sent}`}>
 
             <h1>Get in touch</h1>
+
+
+            <div className={`${classes.SendErrorMsg} ${showErrorMsg && classes.Show}`}
+                onClick={() => setShowErrorMsg(false)}
+            >
+                <button>
+                    <i class="far fa-window-close"></i>
+                </button>
+                <div>
+                    <h2><i class="fas fa-exclamation-circle"></i> Sorry message was not sent</h2>
+                    <p>Refresh page, make sure you are connected to the internet and try again</p>
+                </div>
+            </div>
+
 
             <form onSubmit={handleSubmit(onSubmit)} autoComplete="off" id="contact-form">
 
